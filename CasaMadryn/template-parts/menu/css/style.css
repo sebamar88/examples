@@ -1,0 +1,12 @@
+.menu-lebianch-hambur{
+	background:red !important;
+	position: fixed !important;
+    bottom: 10% !important;
+    background: #ccc !important;
+    z-index: 10 !important;
+    right: 10% !important;
+    border: none !important;
+    padding: 15px !important;
+    border-radius: 50% !important;
+    box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.38) !important;
+	}

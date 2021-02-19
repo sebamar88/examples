@@ -1,0 +1,28 @@
+/*
+	Theme Name: LAG Ventas by Lebianch
+	Theme URI: https://lebianch.com
+	Description: LAG Ventas by Lebianch Theme
+	Version: 1.0.0
+	Author: Sebastian Martinez & Jonatan Bianchi
+	Author URI: https://lebianch.com
+	Tags: SEO, Agencia digital
+
+	License: GNU General Public Licence v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+.acf-image-uploader .image-wrap img {
+    max-width: 18%!important;
+    width: auto;
+    height: auto;
+    display: block;
+    min-width: 30px;
+    min-height: 30px;
+    background: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width:768px){
+	.col-md-6.linea{
+	border-right:2px solid #274287 !important;
+}
+}
