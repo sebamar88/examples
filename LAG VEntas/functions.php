@@ -5,10 +5,8 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 
 function seothemelebianch_productos_post_type() {
-////////////////////////////////////////////////////////////////////	
-global $titulo_global;
-$titulo_global='productos';
-////////////////////////////////////////////////////////////////////
+
+
 	$labels = array(
 		'name'                  => _x( 'Productos', 'Post Type General Name', 'seothemelebianch' ),
 		'singular_name'         => _x( 'Productos', 'Post Type Singular Name', 'seothemelebianch' ),
@@ -41,7 +39,7 @@ $titulo_global='productos';
 	$args = array(
 		'label'                 => __( 'Producto', 'seothemelebianch' ),
 		'description'           => __( 'Productos para el Sitio Web', 'seothemelebianch' ),
-		'rewrite' => array('slug' => $titulo_global,'with_front' => false),
+		'rewrite' => array('slug' => 'productos','with_front' => false),
 		'labels'                => $labels,
 		'hierarchical'          => true, //true = posts, false = paginas
 		'public'                => true,
@@ -358,37 +356,7 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 
-add_action("login_head", "my_login_head");
 
-function my_login_head() {
-echo '
-<style>
-body.login #login h1 a {
-width: 252px;
-height: 84px;
-background-size: 252px 84px;
-padding-bottom: 5px;
-background-image: url("'.site_url().'/wp-content/themes/lebianch-seo/inc/lebianch.png");
-
-}
-</style>
-';
-}
-//Cambiar texto alt del logo de login
-add_action("login_headertitle","my_custom_login_title");
-function my_custom_login_title()
-{
-return 'Lebianch.com';
-} 
-// personalizar url logo acceso
-add_action( 'login_headerurl', 'my_custom_login_url' );
-function my_custom_login_url() {
-return 'https://lebianch.com';
-}
-
-
-
-  
 
 
 function dcms_agregar_nueva_zona_widgets() {
@@ -417,7 +385,7 @@ function dcms_agregar_nueva_zona_widgets() {
 add_action( 'widgets_init', 'dcms_agregar_nueva_zona_widgets' );
 
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+    return $length;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
